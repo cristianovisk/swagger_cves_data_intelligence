@@ -34,7 +34,7 @@ paths:
       produces:
       - "application/json"
       parameters:
-       name: "year"
+      - name: "year"
         in: "path"
         description: "YEAR CVE"
         required: true
