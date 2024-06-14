@@ -64,11 +64,75 @@ definitions:
     type: "object"
     properties:
       cve:
-        type: "string"
-        example: "CVE-2024-0000"
+        type: string
+        example: "CVE-2024-3400"
       created_datetime:
-        type: "string"
+        type: string
+        format: date-time
         example: "2024-04-13T02:15:30"
+      author_id:
+        type: string
+        example: "776486238"
+      data_id:
+        type: string
+        example: "1778970234340118692"
+      reposts:
+        type: integer
+        example: 1
+      post:
+        type: string
+        example: "rt @cisacyber: \ud83d\udea9palo alto networks has released workaround guidance for a command injection vulnerability (cve-2024-3400) affecting pan-os\u2026"
+      audience:
+        type: integer
+        example: 209
+      audience_total:
+        type: integer
+        example: 54725
+      total_reposts:
+        type: integer
+        example: 32
+      post_count:
+        type: integer
+        example: 1
+      author:
+        type: string
+        example: "nathan mccarthy-gilmore"
+      username:
+        type: string
+        example: "softbinary_ng"
+      v_score:
+        type: number
+        format: float
+        example: 0.739062
+      e_score:
+        type: number
+        format: float
+        example: 0.00043
+      base_score:
+        type: string
+        example: "10"
+      description:
+        type: string
+        example: "A COMMAND INJECTION VULNERABILITY IN THE GLOBALPROTECT FEATURE OF PALO ALTO NETWORKS PAN-OS SOFTWARE FOR SPECIFIC PAN-OS VERSIONS AND DISTINCT FEATURE CONFIGURATIONS MAY ENABLE AN UNAUTHENTICATED ATTACKER TO EXECUTE ARBITRARY CODE WITH ROOT PRIVILEGES ON THE FIREWALL.\n\nFIXES FOR PAN-OS 10.2, PAN-OS 11.0, AND PAN-OS 11.1 ARE IN DEVELOPMENT AND ARE EXPECTED TO BE RELEASED BY APRIL 14, 2024. CLOUD NGFW, PANORAMA APPLIANCES, AND PRISMA ACCESS ARE NOT IMPACTED BY THIS VULNERABILITY. ALL OTHER VERSIONS OF PAN-OS ARE ALSO NOT IMPACTED."
+      last_modified_datetime:
+        type: string
+        format: date-time
+        example: "2024-04-12T17:17:00"
+      published_datetime:
+        type: string
+        format: date-time
+        example: "2024-04-12T08:15:00"
+      vendor_logo:
+        type: string
+        nullable: true
+        example: null
+      profile_url:
+        type: string
+        nullable: true
+        example: null
+      feed_name:
+        type: string
+        example: "twitter"
 
 externalDocs:
   description: "Find out more about Swagger"
