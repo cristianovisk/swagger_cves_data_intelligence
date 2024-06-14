@@ -6,7 +6,7 @@ info:
     \  For this sample, you can use the api key `special-key` to test the authorization\
     \ filters."
   version: "1.0.5"
-  title: "Swagger Petstore"
+  title: "Swagger CVE Data Intelligence"
   termsOfService: "http://swagger.io/terms/"
   contact:
     email: "cristianovisk@gmail.com"
@@ -30,12 +30,12 @@ paths:
       - "social_media"
       summary: "Find Tweets per CVE"
       description: "Return Tweets talking about CVE especified"
-      operationId: "findPetsByStatus"
+      operationId: "x"
       produces:
       - "application/json"
       parameters:
       - name: "cve"
-        in: "query"
+        in: "path"
         description: "Status values that need to be considered for filter"
         required: true
         type: "string"
