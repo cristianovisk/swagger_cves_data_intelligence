@@ -24,7 +24,7 @@ tags:
 schemes:
 - "https"
 paths:
-  /social_media/x/{cve}.json:
+  /social_media/x/{year}/{cve}.json:
     get:
       tags:
       - "social_media"
@@ -34,9 +34,14 @@ paths:
       produces:
       - "application/json"
       parameters:
+       name: "year"
+        in: "path"
+        description: "YEAR CVE"
+        required: true
+        type: "int"
       - name: "cve"
         in: "path"
-        description: "Status values that need to be considered for filter"
+        description: "CVE ID"
         required: true
         type: "string"
       responses:
