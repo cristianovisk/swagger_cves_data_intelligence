@@ -77,6 +77,11 @@ paths:
         description: "CVE ID"
         required: true
         type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        404:
+          description: "Invalid status value"
 definitions:
   Tweets:
     type: "object"
@@ -142,11 +147,9 @@ definitions:
         example: "2024-04-12T08:15:00"
       vendor_logo:
         type: string
-        nullable: true
         example: null
       profile_url:
         type: string
-        nullable: true
         example: null
       feed_name:
         type: string
