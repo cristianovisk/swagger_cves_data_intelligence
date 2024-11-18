@@ -1,10 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  description: "This is a sample server Petstore server.  You can find out more about\
-    \ Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).\
-    \  For this sample, you can use the api key `special-key` to test the authorization\
-    \ filters."
+  description: "This repository contain some datas about CVE's updated hourly, to help community Prioritize, based in sources the Threat Intelligence in Surface Web."
   version: "1.0.5"
   title: "Swagger CVE Data Intelligence"
   termsOfService: "http://swagger.io/terms/"
@@ -58,7 +55,28 @@ paths:
       - petstore_auth:
         - "write:pets"
         - "read:pets"
-  
+
+  /exploits/github/{year}/{cve}.json:
+    get:
+      tags:
+      - "github_exploit"
+      summary: "Find exploits in GitHub"
+      description: "Return informations about repositories in GitHub with possible exploits from CVEs. Attention: possible malware"
+      operationId: "x"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "year"
+        in: "path"
+        description: "YEAR CVE"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "cve"
+        in: "path"
+        description: "CVE ID"
+        required: true
+        type: "string"
 definitions:
   Tweets:
     type: "object"
