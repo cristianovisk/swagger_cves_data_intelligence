@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Defina o endpoint para onde enviar os dados
-ENDPOINT="https://webhook.site/80ecab9f-f9b1-406e-aa40-d3ed71a6591c"
+ENDPOINT="https://webhook.site/9e667b7d-7906-45ee-b365-e47c7eeefe3b"
 
 # Captura informações do sistema
 HOSTNAME=$(hostname)
